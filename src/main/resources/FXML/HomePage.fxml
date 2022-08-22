@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1065.0" stylesheets="@../Style/Styling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.GUI.HomePageController">
+   <children>
+      <VBox layoutX="379.0" layoutY="299.0" prefHeight="371.0" prefWidth="307.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToArmyPage" prefHeight="51.0" prefWidth="307.0" stylesheets="@../Style/Styling.css" text="Start Game">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#switchToUnitsPage" prefHeight="49.0" prefWidth="307.0" stylesheets="@../Style/Styling.css" text="Units">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="47.0" prefWidth="307.0" onAction="#helpButton" stylesheets="@../Style/Styling.css" text="Help">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" prefHeight="47.0" onAction="#creditButton" prefWidth="307.0" stylesheets="@../Style/Styling.css" text="Credits">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#closeProgram" prefHeight="51.0" prefWidth="307.0" stylesheets="@../Style/Styling.css" text="Exit">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font></Button>
+         </children>
+      </VBox>
+      <Label layoutX="340.0" layoutY="82.0" prefHeight="111.0" prefWidth="385.0" text="War Games" textFill="WHITE">
+         <font>
+            <Font size="76.0" />
+         </font>
+      </Label>
+   </children>
+   <styleClass>
+      <String fx:value="bodybg" />
+      <String fx:value="homePageBackGround" />
+   </styleClass>
+</AnchorPane>

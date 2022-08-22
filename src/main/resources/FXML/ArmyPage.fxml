@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1065.0" styleClass="anchorBackGroundGrey" stylesheets="@../Style/Styling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.GUI.ArmyController">
+   <children>
+      <Separator layoutX="16.0" layoutY="21.0" orientation="VERTICAL" prefHeight="678.0" prefWidth="6.0" styleClass="anchorBackGroundMain" stylesheets="@../Style/Styling.css" />
+      <Label layoutX="159.0" layoutY="14.0" text="INFO">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Label>
+      <Separator layoutX="19.0" layoutY="408.0" prefHeight="3.0" prefWidth="428.0" styleClass="anchorBackGroundMain" stylesheets="@../Style/Styling.css" />
+      <Separator layoutX="18.0" layoutY="88.0" prefHeight="3.0" prefWidth="428.0" styleClass="anchorBackGroundMain" stylesheets="@../Style/Styling.css" />
+      <Separator layoutX="224.0" layoutY="88.0" orientation="VERTICAL" prefHeight="323.0" prefWidth="6.0" styleClass="anchorBackGroundMain" stylesheets="@../Style/Styling.css" />
+      <Label fx:id="eachUnitArmyTwo" layoutX="233.0" layoutY="229.0" prefHeight="165.0" prefWidth="203.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalUnitsArmyTwo" layoutX="317.0" layoutY="166.0" prefHeight="26.0" prefWidth="124.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="166.0" text="Total units:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalUnitsArmyOne" layoutX="107.0" layoutY="166.0" prefHeight="26.0" prefWidth="103.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="22.0" layoutY="166.0" prefHeight="26.0" prefWidth="89.0" text="Total units:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="eachUnitArmyOne" layoutX="22.0" layoutY="229.0" prefHeight="165.0" prefWidth="203.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <VBox layoutX="147.0" layoutY="450.0" prefHeight="200.0" prefWidth="165.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToSimulationPage" prefHeight="49.0" prefWidth="165.0" stylesheets="@../Style/Styling.css" text="Simulation">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToUnitsPage" prefHeight="49.0" prefWidth="165.0" stylesheets="@../Style/Styling.css" text="See unit stats">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToHomePage" prefHeight="49.0" prefWidth="165.0" stylesheets="@../Style/Styling.css" text="Homepage">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#closeProgram" prefHeight="49.0" prefWidth="165.0" stylesheets="@../Style/Styling.css" text="Exit">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <ListView fx:id="armyTwoList" layoutX="776.0" layoutY="130.0" prefHeight="527.0" prefWidth="249.0" styleClass="listViewBorder" />
+      <ListView fx:id="armyOneList" layoutX="479.0" layoutY="130.0" prefHeight="527.0" prefWidth="249.0" styleClass="listViewBorder" stylesheets="@../Style/Styling.css" />
+      <Button fx:id="buttonArmyOne" layoutX="545.0" layoutY="73.0" mnemonicParsing="false" onAction="#switchToEditArmyOnePage" prefHeight="34.0" prefWidth="117.0" stylesheets="@../Style/Styling.css" text="Edit Army">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="buttonsHover" />
+         </styleClass>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonArmyTwo" layoutX="835.0" layoutY="73.0" mnemonicParsing="false" onAction="#switchToEditArmyTwoPage" prefHeight="34.0" prefWidth="117.0" stylesheets="@../Style/Styling.css" text="Edit Army">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="buttonsHover" />
+         </styleClass>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label fx:id="nameForArmyOneTop" layoutX="508.0" layoutY="26.0" prefHeight="38.0" prefWidth="191.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameForArmyTwoTop" layoutX="798.0" layoutY="26.0" prefHeight="38.0" prefWidth="191.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="94.0" text="Info about:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameForArmyOneBottom" layoutX="111.0" layoutY="95.0" prefHeight="26.0" prefWidth="110.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="95.0" text="Info about:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameForArmyTwoBottom" layoutX="317.0" layoutY="95.0" prefHeight="26.0" prefWidth="124.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="194.0" text="Total of each unit:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="233.0" layoutY="194.0" prefHeight="26.0" prefWidth="139.0" text="Total of each unit:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="441.0" layoutY="21.0" orientation="VERTICAL" prefHeight="678.0" prefWidth="6.0" styleClass="anchorBackGroundMain" stylesheets="@../Style/Styling.css" />
+      <Separator layoutX="18.0" layoutY="19.0" prefHeight="3.0" prefWidth="428.0" styleClass="anchorBackGroundMain" stylesheets="@../Style/Styling.css" />
+      <Separator layoutX="17.0" layoutY="697.0" prefHeight="3.0" prefWidth="428.0" styleClass="anchorBackGroundMain" stylesheets="@../Style/Styling.css" />
+   </children>
+</AnchorPane>

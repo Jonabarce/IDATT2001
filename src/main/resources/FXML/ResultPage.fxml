@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1065.0" styleClass="anchorBackGroundGrey" stylesheets="@../Style/Styling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.GUI.ResultController">
+   <children>
+      <ListView fx:id="theLoserArmy" layoutX="591.0" layoutY="140.0" prefHeight="403.0" prefWidth="200.0" styleClass="listViewBorder" />
+      <ListView fx:id="theWinnerArmy" layoutX="810.0" layoutY="17.0" prefHeight="403.0" prefWidth="200.0" styleClass="listViewBorder" />
+      <Separator layoutX="798.0" layoutY="430.0" orientation="VERTICAL" prefHeight="127.0" prefWidth="6.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="801.0" layoutY="428.0" prefHeight="3.0" prefWidth="217.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="579.0" layoutY="554.0" orientation="VERTICAL" prefHeight="140.0" prefWidth="6.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="582.0" layoutY="554.0" prefHeight="3.0" prefWidth="217.0" styleClass="anchorBackGroundMain" />
+      <Label layoutX="648.0" layoutY="555.0" text="2nd place">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="871.0" layoutY="428.0" text="1st place">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameForArmyLoser" layoutX="595.0" layoutY="591.0" prefHeight="27.0" prefWidth="191.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameForArmyWinner" layoutX="814.0" layoutY="466.0" prefHeight="27.0" prefWidth="191.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="29.0" layoutY="653.0" prefHeight="40.0" prefWidth="533.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#switchToSimulationPage" prefHeight="45.0" prefWidth="133.0" text="Simulationpage">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToArmiesPage" prefHeight="45.0" prefWidth="133.0" text="See armies">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToHomePage" prefHeight="45.0" prefWidth="133.0" text="Homepage">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#closeProgram" prefHeight="45.0" prefWidth="133.0" text="Exit">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <Label fx:id="nameForWinnerForDisplayingInfo" layoutX="98.0" layoutY="166.0" prefHeight="38.0" prefWidth="296.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalUnits" layoutX="190.0" layoutY="304.0" prefHeight="35.0" prefWidth="111.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="161.0" layoutY="390.0" prefHeight="26.0" prefWidth="169.0" text="Total of each unit left:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalUnitsOfEachType" layoutX="123.0" layoutY="431.0" prefHeight="174.0" prefWidth="245.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="45.0" layoutY="641.0" prefHeight="3.0" prefWidth="533.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="94.0" layoutY="388.0" prefHeight="3.0" prefWidth="304.0" styleClass="anchorBackGroundMain" />
+      <Label layoutX="98.0" layoutY="25.0" prefHeight="46.0" prefWidth="296.0" text="INFO ABOUT WINNER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="91.0" layoutY="23.0" orientation="VERTICAL" prefHeight="619.0" prefWidth="6.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="398.0" layoutY="23.0" orientation="VERTICAL" prefHeight="619.0" prefWidth="6.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="94.0" layoutY="418.0" prefHeight="3.0" prefWidth="304.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="94.0" layoutY="69.0" prefHeight="3.0" prefWidth="304.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="94.0" layoutY="23.0" prefHeight="3.0" prefWidth="304.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="151.0" layoutY="389.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="6.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="327.0" layoutY="389.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="6.0" styleClass="anchorBackGroundMain" />
+      <Label layoutX="190.0" layoutY="219.0" text="Total units left:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="94.0" layoutY="243.0" prefHeight="3.0" prefWidth="304.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="94.0" layoutY="217.0" prefHeight="3.0" prefWidth="304.0" styleClass="anchorBackGroundMain" />
+      <Label layoutX="154.0" layoutY="121.0" text="The winner was:">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Separator layoutX="309.0" layoutY="218.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="6.0" styleClass="anchorBackGroundMain" />
+      <Separator layoutX="177.0" layoutY="218.0" orientation="VERTICAL" prefHeight="27.0" prefWidth="6.0" styleClass="anchorBackGroundMain" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="test" prefHeight="720.0" prefWidth="1065.0" styleClass="anchorBackGroundGrey" stylesheets="@../Style/Styling.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.GUI.SimulationController">
+   <children>
+      <AnchorPane fx:id="forDisplayingTerrain" layoutX="71.0" layoutY="95.0" prefHeight="365.0" prefWidth="923.0" styleClass="anchorPaneBorder" stylesheets="@../Style/Styling.css" />
+      <VBox layoutX="71.0" layoutY="491.0" prefHeight="97.0" prefWidth="126.0">
+         <children>
+            <CheckBox fx:id="checkboxPLAIN" mnemonicParsing="false" text="Plain">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkboxHILL" mnemonicParsing="false" text="Hill">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkboxFOREST" mnemonicParsing="false" text="Forest">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="checkboxNOTERRAIN" mnemonicParsing="false" text="No terrain">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </VBox>
+      <Label fx:id="whoIsFighting" layoutX="295.0" layoutY="54.0" prefHeight="17.0" prefWidth="475.0">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="winnerTextLabel" layoutX="811.0" layoutY="461.0" prefHeight="17.0" prefWidth="174.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="winner" layoutX="811.0" layoutY="515.0" prefHeight="17.0" prefWidth="214.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ButtonBar layoutX="218.0" layoutY="665.0" prefHeight="40.0" prefWidth="627.0">
+         <buttons>
+            <Button mnemonicParsing="false" onAction="#switchToArmiesPage" prefHeight="41.0" prefWidth="157.0" text="See armies">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToUnitsPage" prefHeight="40.0" prefWidth="129.0" text="Units stats">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToHomePage" prefHeight="41.0" prefWidth="158.0" text="Homepage">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#closeProgram" prefHeight="40.0" prefWidth="158.0" text="Exit">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </buttons>
+      </ButtonBar>
+      <Label fx:id="currentlyTerrain" layoutX="71.0" layoutY="461.0" prefHeight="30.0" prefWidth="325.0" styleClass="listViewBorder" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <VBox layoutX="400.0" layoutY="460.0" prefHeight="109.0" prefWidth="265.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#startSimulation" prefHeight="54.0" prefWidth="280.0" text="Start Battle">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="seeResultButton" mnemonicParsing="false" onAction="#switchToResultPage" prefHeight="54.0" prefWidth="280.0" text="See result">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="71.0" layoutY="601.0" prefHeight="84.0" prefWidth="114.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#setTerrain" prefHeight="39.0" prefWidth="114.0" text="Set terrain">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#helpButton" prefHeight="39.0" prefWidth="114.0" text="Help">
+               <styleClass>
+                  <String fx:value="buttonsHover" />
+                  <String fx:value="buttons" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

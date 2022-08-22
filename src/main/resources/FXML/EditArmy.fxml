@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1065.0" styleClass="anchorBackGroundGrey" stylesheets="@../Style/Styling.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.idatt2001.GUI.EditArmyController">
+   <children>
+      <Button layoutX="759.0" layoutY="414.0" mnemonicParsing="false" onAction="#removeAllUnits" prefHeight="25.0" prefWidth="156.0" stylesheets="@../Style/Styling.css" text="Remove">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="buttonsHover" />
+         </styleClass>
+      </Button>
+      <Button layoutX="780.0" layoutY="545.0" mnemonicParsing="false" onAction="#switchToSimulationPage" prefHeight="50.0" prefWidth="218.0" text="Simulation">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="buttonsHover" />
+         </styleClass>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Label layoutX="755.0" layoutY="250.0" text="Remove random units">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalOfEachUnit" layoutX="358.0" layoutY="570.0" prefHeight="121.0" prefWidth="191.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="514.0" text="Total Units:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="totalUnitsForRemoving" layoutX="753.0" layoutY="50.0" promptText="Total units" styleClass="textFields" stylesheets="@../Style/Styling.css">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="newNameForArmy" layoutX="566.0" layoutY="65.0" promptText="New name" styleClass="textFields" stylesheets="@../Style/Styling.css">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Button layoutX="566.0" layoutY="95.0" mnemonicParsing="false" onAction="#makeNewNameForArmy" prefHeight="30.0" prefWidth="163.0" stylesheets="@../Style/Styling.css" text="Change Name for army">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="buttonsHover" />
+         </styleClass>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="755.0" layoutY="312.0" mnemonicParsing="false" onAction="#removeRandomUnits" prefHeight="30.0" prefWidth="163.0" stylesheets="@../Style/Styling.css" text="Remove x random units">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="buttonsHover" />
+         </styleClass>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <VBox layoutX="753.0" layoutY="82.0" prefHeight="77.0" prefWidth="149.0">
+         <children>
+            <CheckBox fx:id="rangedUnitForRemoving" mnemonicParsing="false" text="Ranged Unit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="infantryUnitForRemoving" mnemonicParsing="false" text="Infantry Unit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="commanderUnitForRemoving" mnemonicParsing="false" text="Commander Unit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cavalryUnitForRemoving" mnemonicParsing="false" text="Cavalry Unit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </VBox>
+      <VBox layoutX="372.0" layoutY="282.0" prefHeight="146.0" prefWidth="163.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#switchToUnitsPage" prefHeight="30.0" prefWidth="167.0" stylesheets="@../Style/Styling.css" text="See unit stats">
+               <styleClass>
+                  <String fx:value="buttonsHover" />
+                  <String fx:value="buttons" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#addUnitsToArmy" prefHeight="30.0" prefWidth="165.0" stylesheets="@../Style/Styling.css" text="Add Units and save">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#switchToArmiesPage" prefHeight="30.0" prefWidth="164.0" stylesheets="@../Style/Styling.css" text="Go back">
+               <styleClass>
+                  <String fx:value="buttons" />
+                  <String fx:value="buttonsHover" />
+               </styleClass>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <TextField fx:id="totalUnits" layoutX="369.0" layoutY="139.0" promptText="Total units" styleClass="textFields" stylesheets="@../Style/Styling.css">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="nameForUnit" layoutX="369.0" layoutY="65.0" promptText="Name" styleClass="textFields" stylesheets="@../Style/Styling.css">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="369.0" layoutY="24.0" text="Add Units to: ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <ListView fx:id="savedArmy" layoutX="54.0" layoutY="65.0" prefHeight="631.0" prefWidth="301.0" styleClass="listViewBorder" stylesheets="@../Style/Styling.css" />
+      <Label fx:id="currentlySavedArmyName" layoutX="509.0" layoutY="23.0" prefHeight="31.0" prefWidth="191.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="armyName" layoutX="109.0" layoutY="23.0" prefHeight="31.0" prefWidth="191.0" text="MMMMMMMM">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="health" layoutX="369.0" layoutY="102.0" promptText="Health" styleClass="textFields" stylesheets="@../Style/Styling.css">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <VBox layoutX="372.0" layoutY="184.0" prefHeight="77.0" prefWidth="147.0" stylesheets="@../Style/Styling.css">
+         <children>
+            <CheckBox fx:id="rangedUnit" mnemonicParsing="false" text="Ranged Unit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="infantryUnit" mnemonicParsing="false" text="Infantry Unit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="commanderUnit" mnemonicParsing="false" text="Commander Unit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cavalryUnit" mnemonicParsing="false" text="Cavalry Unit">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </CheckBox>
+         </children>
+      </VBox>
+      <TextField fx:id="totalRandomUnitsToRemove" layoutX="755.0" layoutY="282.0" prefHeight="30.0" prefWidth="163.0" promptText="Total units" styleClass="textFields" stylesheets="@../Style/Styling.css">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </TextField>
+      <Separator layoutX="733.0" layoutY="23.0" orientation="VERTICAL" prefHeight="646.0" prefWidth="2.0" styleClass="anchorBackGroundMain" stylesheets="@../Style/Styling.css" />
+      <Label layoutX="753.0" layoutY="24.0" text="Remove selected units">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalOfUnits" layoutX="452.0" layoutY="513.0" prefHeight="21.0" prefWidth="88.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="362.0" layoutY="545.0" text="Total of each units:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Separator layoutX="354.0" layoutY="506.0" prefHeight="0.0" prefWidth="383.0" styleClass="anchorBackGroundMain" />
+      <Label layoutX="758.0" layoutY="381.0" prefHeight="31.0" prefWidth="156.0" text="Remove all units">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Button layoutX="751.0" layoutY="176.0" mnemonicParsing="false" onAction="#removeChosenUnit" prefHeight="30.0" prefWidth="168.0" stylesheets="@../Style/Styling.css" text="Remove Selected units">
+         <styleClass>
+            <String fx:value="buttons" />
+            <String fx:value="buttonsHover" />
+         </styleClass>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

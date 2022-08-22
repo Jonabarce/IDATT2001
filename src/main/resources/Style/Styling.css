@@ -1,0 +1,93 @@
+.anchorBackGroundMain{
+    -fx-background-color: black;
+}
+
+
+.anchorBackGroundGrey{
+    -fx-background-color: #A9A9A9;
+}
+
+.anchorPaneBorder{
+    -fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.cavalryUnitPicture{
+    -fx-background-image: url("../Pictures/cavalryUnit.png");
+    -fx-background-size: 100% 100%;
+}
+
+.infantryUnitPicture{
+    -fx-background-image: url("../Pictures/infantryUnit.png");
+    -fx-background-size: 100% 100%;
+}
+
+.commanderUnitPicture{
+    -fx-background-image: url("../Pictures/commanderUnit.png");
+    -fx-background-size: 100% 100%;
+}
+
+.rangedUnitPicture{
+    -fx-background-image: url("../Pictures/rangedUnit.png");
+    -fx-background-size: 100% 100%;
+}
+
+.forestPicture{
+    -fx-background-image: url("../Pictures/Forest.png");
+    -fx-background-size: 100% 100%;
+}
+
+.plainPicture{
+    -fx-background-image: url("../Pictures/Plain.png");
+    -fx-background-size: 100% 100%;
+}
+
+.hillPicture{
+    -fx-background-image: url("../Pictures/Hill.png");
+    -fx-background-size: 100% 100%;
+}
+
+.noTerrainPicture{
+    -fx-background-image: url("../Pictures/NoTerrain.png");
+    -fx-background-size: 100% 100%;
+}
+
+
+.listViewBorder{
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+
+.anchorPaneBorder{
+    -fx-border-width: 2px;
+    -fx-border-color: black;
+}
+
+.unitsPageBackground{
+    -fx-background-image: url("../Pictures/Forest.png");
+    -fx-background-size: 100% 100%;
+}
+
+.homePageBackGround{
+    -fx-background-image: url("../Pictures/HomePage.png");
+    -fx-background-size: 100% 100%;
+}
+.buttons{
+    -fx-background-color: #575757;
+    -fx-text-fill: white;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+
+.buttonsHover:hover {
+    -fx-background-color: white;
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+    -fx-text-fill: black;
+}
+
+.textFields{
+    -fx-border-width: 1px;
+    -fx-border-color: black;
+}
+
